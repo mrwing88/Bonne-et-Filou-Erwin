@@ -1,0 +1,9 @@
+{%- comment -%} timeline.liquid @ line 16 | The carousel-navigation was moved to the top of the timeline-carousel. {%- endcomment -%}
+
+        <carousel-navigation align-selected aria-controls="{{ carousel_id }}" class="timeline__nav hide-scrollbar bleed sm:unbleed">
+          {%- for block in section.blocks -%}
+            <button class="heading" aria-current="{% if forloop.first %}true{% else %}false{% endif %}">
+              {{- block.settings.label | default: forloop.index -}}
+            </button>
+          {%- endfor -%}
+        </carousel-navigation>
