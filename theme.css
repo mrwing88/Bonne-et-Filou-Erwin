@@ -614,3 +614,10 @@ blockquote, dl, dd, h1, h2, h3, h4, h5, h6, hr, figure, p, pre {
   position: relative;
   background-image: url(/cdn/shop/files/marble.png?v=1636717765)!important; /* adding this style rule */
 }
+
+.article {
+  --article-wrapper-offset: 0px;
+  --article-wrapper-padding-inline: 2rem; /* updating this style rule from 0px to 2rem */
+  padding-block-end: var(--section-vertical-spacing);
+}
+
