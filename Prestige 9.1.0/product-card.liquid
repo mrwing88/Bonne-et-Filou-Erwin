@@ -1,1 +1,4 @@
-
+<form method="post" action="/cart/add" class="collection-cart-btn">
+  <input type="hidden" name="id" value="{{ product.variants.first.id }}" />
+  <input type="submit" value="Add to cart" class="button" style="margin-top: 17px; width: 100%;" />
+</form>
