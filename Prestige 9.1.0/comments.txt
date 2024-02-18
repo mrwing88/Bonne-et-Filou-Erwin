@@ -1,4 +1,5 @@
 settings_data.json | adding the color_schemes below the content_for_index to take away the error of updating the previous version of Prestige 9.0.1 to Prestige 9.1.0
 
+product-card.liquid | adding this code @ line 183 | Add to cart button
 
 
