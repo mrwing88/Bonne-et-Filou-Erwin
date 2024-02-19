@@ -14,12 +14,12 @@ Paste the {% render 'breadcrumb' %} at the bottom of the <main id="main" class="
 
 <style>
   .breadcrumbs {
-    margin: 50px 250px 2em;
+    margin: 20px 60px;
+    text-align: center;
   }
 
   .breadcrumbs__list {
     list-style-type: none;
-    margin: 0;
     padding: 0;
   }
 
@@ -31,9 +31,8 @@ Paste the {% render 'breadcrumb' %} at the bottom of the <main id="main" class="
     border-style: solid;
     border-width: .10em .10em 0 0;
     content: '';
-    display: inline-block;
     height: .20em;
-    margin: 0 1.20em;
+    margin: 0 .50em;
     position: relative;
     transform: rotate(45deg);
     vertical-align: middle;
@@ -41,18 +40,19 @@ Paste the {% render 'breadcrumb' %} at the bottom of the <main id="main" class="
   }
 
   .breadcrumbs__link {
-    text-decoration: underline;
+    text-decoration: bold;
   }
 
   .breadcrumbs__link[aria-current="page"] {
     color: inherit;
     font-weight: normal;
     text-decoration: none;
+    text-transform: capitalize;
   }
 
   .breadcrumbs__link[aria-current="page"]:hover,
   .breadcrumbs__link[aria-current="page"]:focus {
-    text-decoration: underline;
+    text-decoration: bold;
   }
 </style>
 
@@ -62,7 +62,7 @@ Paste the {% render 'breadcrumb' %} at the bottom of the <main id="main" class="
 <nav class="breadcrumbs" role="navigation" aria-label="breadcrumbs">
   <ol class="breadcrumbs__list">
     <li class="breadcrumbs__item">
-      <a class="breadcrumbs__link" href="/">Home</a>
+      <a class="breadcrumbs__link" href="/"><b>Bonne et Filou</b></a>
     </li>
     {%- case t -%}
       {%- when 'page' -%}
