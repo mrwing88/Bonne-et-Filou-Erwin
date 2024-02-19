@@ -1,1 +1,149 @@
+/* theme.css Prestige 9.1.0 */
 
+.header__dropdown-menu {
+  background: rgb(var(--background));
+  color: rgb(var(--text-color));
+  box-shadow: 2px 2px 6px rgb(var(--text-color) / .05);
+  border-width: 0 1px 1px;
+  width: max-content;
+  min-width: max-content; /* updating this style rule from 12.5rem to max-content */
+  max-width: 17.5rem;
+  padding-block: 1.125rem;
+  position: absolute;
+  inset-block-start: calc(100% - 2px);
+  display: inline-flex; /* adding this style rule */
+}
+
+.header__dropdown-menu .header__dropdown-menu {
+  border-width: 1px;
+/*  inset-block-start: calc(-1.125rem - 1px); */ /* removing this style rule */
+/*  inset-inline-start: 100%; */ /* removing this style rule */
+  display: contents; /* adding this style rule */
+}
+
+.header__dropdown-menu :is(a, summary) {
+  padding: .375rem 1.5625rem;
+  display: inline-flex; /* updating this style rule from block to inline-flex */
+  width: 260px; /* adding this style rule */
+}
+
+.logo-list__item {
+  outline: 1px solid rgb(var(--logo-list-item-border-color));
+  place-items: center;
+  padding: 1.25rem;
+  display: grid;
+  margin: 1rem; /* adding this style rule */
+  border-radius: 14px; /* adding this style rule */
+}
+
+.testimonial-list__thumbnail img {
+  max-width: var(--image-max-width);
+  border-radius: 50%; /* adding this style rule */
+}
+
+.social-media--list {
+  align-items: center;
+  gap: var(--social-media-list-gap, .75rem 2rem);
+  flex-wrap: wrap;
+  display: flex;
+  place-self: center; /* adding this style rule */
+}
+
+.social-media--list .social-media__item {
+  opacity: 2; /* updating this style rule from .65 to 2 */
+  transition: opacity .2s, color .2s;
+}
+
+.social-media--list svg {
+  width: var(--social-media-icon-size, 1.5rem); /* updating this style rule from var(--social-media-icon-size, 1.25rem) to var(--social-media-icon-size, 1.5rem) */
+}
+
+.footer__inner {
+  row-gap: min(var(--section-vertical-spacing), 2rem); /* updating this style rule from min(var(--section-vertical-spacing), 3rem) to min(var(--section-vertical-spacing), 2rem) */
+  display: grid;
+}
+
+@media screen and (min-width: 1400px) {
+  .footer__block-list {
+    column-gap: 5rem; /* updating this style rule from 5rem to 10rem */
+  }
+}
+
+@media screen and (min-width: 1150px) {
+  .footer__block-list {
+    justify-content: center; /* updating this style rule from var(--footer-content-justify-items) to center */
+    column-gap: 3.75rem;
+  }
+}
+
+.footer__aside {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  display: flex; /* updating this style rule from grid to flex */
+  flex-direction: column; /* adding this stule rule */
+}
+
+.footer__aside .payment-methods {
+  justify-content: center;
+/*  max-width: 30rem; */ /* removing this style rule */
+}
+
+.cart-drawer__order-note {
+  background-color: rgb(var(--background));
+  background-image: var(--background-gradient);
+  box-shadow: 1px 0 6px rgb(var(--border-color));
+  z-index: 2;
+  border-block-start-width: 1px;
+  width: 100%;
+  padding-block-start: calc(var(--drawer-footer-padding-block)  - .5rem);
+  padding-block-end: var(--drawer-footer-padding-block);
+  padding-inline-start: var(--drawer-body-padding-inline);
+  padding-inline-end: var(--drawer-body-padding-inline);
+  display: none;
+  position: absolute;
+  inset-block-end: 0;
+  inset-inline-start: 0;
+  padding-bottom: 5rem; /* adding this style rule */
+}
+
+.button-group {
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+  display: flex;
+  padding-bottom: 17rem; /* adding this style rule */
+}
+
+.article__toolbar.is-visible {
+  visibility: visible;
+  transform: translateY(0);
+  background-color: whitesmoke; /* adding this style rule */
+}
+
+.article__image + .article__wrapper {
+/*  margin-block-start: var(--article-wrapper-offset); */ /* removing this style rule */
+}
+
+.article__wrapper {
+  padding: 1.5rem var(--article-wrapper-padding-inline) 0;
+  background: rgb(var(--background));
+  gap: 5rem;
+  margin-inline-start: max(var(--container-gutter), 50% - var(--container-max-width) / 2 - var(--article-wrapper-padding-inline));
+  margin-inline-end: max(var(--container-gutter), 50% - var(--container-max-width) / 2 - var(--article-wrapper-padding-inline));
+  display: grid;
+  position: relative;
+  background-image: url(/cdn/shop/files/marble.png?v=1636717765)!important; /* adding this style rule */
+}
+
+.overflow-hidden {
+  overflow: hidden;
+  border-radius: 14px; /* adding this style rule */
+}
+
+.article {
+  --article-wrapper-offset: 2rem; /* updating this style rule from 0px to 2rem */
+  --article-wrapper-padding-inline: 0px;
+  padding-block-end: var(--section-vertical-spacing);
+}
