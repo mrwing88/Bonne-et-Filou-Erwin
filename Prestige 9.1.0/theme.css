@@ -1,17 +1,19 @@
 /* theme.css Prestige 9.1.0 */
 
+
 .header__dropdown-menu {
   background: rgb(var(--background));
   color: rgb(var(--text-color));
   box-shadow: 2px 2px 6px rgb(var(--text-color) / .05);
   border-width: 0 1px 1px;
   width: max-content;
-  min-width: max-content; /* updating this style rule from 12.5rem to max-content */
+  min-width: 100%; /* updating this style rule from 12.5rem to 100% */
   max-width: 17.5rem;
   padding-block: 1.125rem;
   position: absolute;
   inset-block-start: calc(100% - 2px);
   display: inline-flex; /* adding this style rule */
+  left: 0; /* adding this style rule */
 }
 
 .header__dropdown-menu .header__dropdown-menu {
@@ -23,8 +25,8 @@
 
 .header__dropdown-menu :is(a, summary) {
   padding: .375rem 1.5625rem;
-  display: inline-flex; /* updating this style rule from block to inline-flex */
-  width: 260px; /* adding this style rule */
+  display: table; /* updating this style rule from block to table */
+  width: auto!important; /* adding this style rule */
 }
 
 .logo-list__item {
@@ -113,7 +115,7 @@
   align-items: center;
   gap: 1rem;
   display: flex;
-  padding-bottom: 17rem; /* adding this style rule */
+  padding-bottom: 17.5rem; /* adding this style rule */
 }
 
 .article__toolbar.is-visible {
@@ -147,3 +149,74 @@
   --article-wrapper-padding-inline: 0px;
   padding-block-end: var(--section-vertical-spacing);
 }
+
+button, [type="button"], [type="reset"], [type="submit"] {
+  -webkit-appearance: button;
+  background-color: #0000;
+  background-image: none;
+  border-radius: 14px!important; /* adding this style rule */
+}
+
+.text-xxs {
+  font-size: .9rem; /* Updating this style rule from .6875rem to .9rem */
+  text-transform: capitalize!important; /* adding this style rule */
+}
+
+.header__dropdown-menu .header__menu-disclosure {
+  position: relative;
+  width: 276px; /* adding this style rule */
+}
+
+.product-sticky-bar.is-visible {
+  opacity: 1;
+  visibility: visible;
+  margin-bottom: 3rem; /* adding this style rule */
+}
+
+.rating-badge {
+  flex-wrap: wrap;
+  align-items: center;
+  column-gap: .5rem;
+  line-height: normal;
+  display: flex;
+  justify-content: center; /* adding this style rule */
+}
+
+.product-info__block-group:has(.product-info__block-item:is([data-block-type="variant-picker"], [data-block-type="product-variations"], [data-block-type="separator"], [data-block-type="description"], [data-block-type="text"], [data-block-type="liquid"], [data-block-type="share-buttons"])) {
+  --product-info-gap: 1.5rem;
+  text-align: -webkit-center; /* adding this style rule */
+}
+
+.quantity-selector__button {
+  place-content: center;
+  display: grid;
+  border-width: medium; /* adding this style rule */
+}
+
+.quantity-selector {
+  --quantity-selector-height: 2.7rem;
+  --quantity-selector-input-width: 10rem; /* updating this style rule from 2.5rem to 10rem */
+  --tooltip-offset: calc(-1 * var(--quantity-selector-height) / 2 + 1rem);
+  grid-template-columns: var(--quantity-selector-height) auto var(--quantity-selector-height);
+  grid-auto-rows: var(--quantity-selector-height);
+  border-width: 0px; /* updating this style rule from 1px to 0px */
+  display: inline-grid;
+  width: 100%; /* adding this style rule */
+  justify-content: center; /* adding this style rule */
+}
+
+.product-info__block-item:is([data-block-type="inventory"], [data-block-type="buy-buttons"], [data-block-type="pickup-availability"], [data-block-type="more-information"], [data-block-type="offers"]) {
+  --product-info-gap: 2rem;
+  text-align: center; /* adding this style rule */
+}
+
+.price-list--product {
+  column-gap: 1rem;
+  justify-self: center; /* adding this style rule */
+}
+
+.product-info__block-item:is([data-block-type="variant-picker"], [data-block-type="product-variations"], [data-block-type="separator"], [data-block-type="description"], [data-block-type="text"], [data-block-type="liquid"], [data-block-type="share-buttons"]) {
+  --product-info-gap: 1.5rem;
+  text-align: -webkit-center; /* adding this style rule */
+}
+
