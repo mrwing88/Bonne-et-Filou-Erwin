@@ -5,6 +5,6 @@ product-card.liquid | adding this code @ line 183 | Add to cart button
 product-quick-buy.liquid | Updating desktop_layout from carousel_dots to carousel_thumbnails_bottom @ line 34 | reference variables is from product-gallery.liquid > desktop_layout
 product-quick-buy.liquid | Updating mobile_controls from arrows to free_scroll @ line 35 | reference variables is from product-gallery.liquid > mobile_controls
 
-
+header.liquid | inserting <li class="menuimg"></li> @ line 159
 
 
