@@ -1,1 +1,10 @@
+                                    <li class="menuimg"></li>
+                                    {% if link.title contains 'Shop' %}
+                                      <li class="Linklist__Item list_last" style="display:none !important;">
+                                        <a href="/collections" class="Link Link--secondary" data-type="" data-img="">Shop All </a>
+                                      </li>
+                                    {%- endif -%}
+                                    {% if link.title contains 'Shop' %}
+                                      <a style="font-weight: bold !important;text-decoration: underline !important;" href="/collections" class="Link Link--secondary" data-type="" data-img="">Shop All </a>
+                                    {%- endif -%}
 
