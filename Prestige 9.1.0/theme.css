@@ -1,3 +1,4 @@
+
 /* theme.css Prestige 9.1.0 */
 
 .header__dropdown-menu {
@@ -218,4 +219,93 @@ button, [type="button"], [type="reset"], [type="submit"] {
   --product-info-gap: 1.5rem;
   text-align: -webkit-center; /* adding this style rule */
 }
+
+.article__image > img {
+  height: 628px; /* updating this style rule from var(--article-image-height) to 628px */
+  object-fit: contain; /* updating this style rule from cover to contain */
+  padding-top: 4rem; /* adding this style rule */
+  padding-bottom: 5rem; /* adding this style rule */
+}
+
+.cart-drawer__footer {
+  align-items: start;
+  gap: 1rem;
+  display: grid;
+  padding-bottom: 17.5rem; /* adding this style rule */
+}
+
+.customer-account-box {
+/*  min-height: calc(100vh - var(--section-vertical-spacing) * 2 - var(--announcement-bar-height, 0px)  - var(--header-height, 0px)); */ /* removing this style rule */
+  text-align: center;
+  align-items: center;
+  display: grid;
+}
+
+@media screen and (min-width: 700px) {
+  .collection-toolbar {
+    flex-direction: row-reverse;
+    justify-content: space-evenly; /* updating this style rule from space-between to space-evenly */
+  }
+
+  .collection-toolbar__button {
+    padding-block: 1.125rem;
+  }
+
+  .collection-toolbar__button-list {
+    flex-direction: row-reverse;
+    flex: none;
+    border: solid gray; /*adding this style rule */
+  }
+
+  .collection-toolbar__button-container {
+    border-inline-start-width: 1px;
+  }
+
+  .collection-toolbar__button-container > .collection-toolbar__button {
+    width: max-content;
+    padding-inline: 2.875rem;
+  }
+
+  .collection-toolbar__layout-switch-list {
+    border-inline-width: 0 1px;
+    padding-inline: 1.875rem;
+    border: solid gray; /*adding this style rule */
+  }
+
+  .collection-toolbar__products-count {
+    position: absolute;
+    inset-block-start: 50%;
+    inset-inline-start: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@media screen and (min-width: 1150px) {
+  .h1,
+  :where(.prose h1) {
+    line-height: 1.3;
+    text-align: start; /* updating this style rule from center to start */
+  }
+
+  .h2,
+  :where(.prose h2) {
+    line-height: 1.4;
+  }
+
+  .h3,
+  :where(.prose h3) {
+    line-height: 1.5;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
 
