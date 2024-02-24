@@ -1,4 +1,3 @@
-
 /* theme.css Prestige 9.1.0 */
 
 .header__dropdown-menu {
@@ -297,6 +296,36 @@ button, [type="button"], [type="reset"], [type="submit"] {
     line-height: 1.5;
   }
 }
+
+.link, .prose a:not(.h1, .h2, .h3, .h4, .h5, .h6, .button, .link-faded, .link-faded-reverse) {
+/*  text-underline: none; */ /* removing this style rule */
+/*  background: linear-gradient(to right, currentColor, currentColor) 0 min(100%, 1.35em) / 100% 1px no-repeat; */ /* removing this style rule */
+  transition: background-size .3s ease-in-out;
+  font-family: Garamond, Baskerville, Caslon, serif; /* adding this style rule */
+  letter-spacing: 0.2em; /* adding this style rule */
+}
+
+.h6, :where(.prose h6) {
+  font-size: var(--text-h6);
+  line-height: 1.7;
+  letter-spacing: 0.2em; /* adding this style rule */
+}
+
+@media screen and (min-width: 700px) {
+  .slideshow:has(.page-dots, .slideshow__volume-control) {
+    --content-over-media-row-gap: 5rem; /* updating this style rule from 5rem to 1rem */
+  }
+
+  .slideshow__slide-content--boxed {
+    padding: 3.5rem;
+  }
+
+  .slideshow__slide-content--with-border-offset {
+    outline-offset: -1rem;
+  }
+}
+
+
 
 
 
