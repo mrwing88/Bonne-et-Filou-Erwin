@@ -325,6 +325,38 @@ button, [type="button"], [type="reset"], [type="submit"] {
   }
 }
 
+@media screen and (min-width: 700px) {
+  .timeline__nav {
+    margin-block-end: var(--section-stack-gap); /* updating this style rule from margin-block-start to margin-block-end */
+  }
+
+  .timeline__nav > button:after {
+    inset-block-end: -.5rem;
+  }
+}
+
+.section-spacing {
+  padding-block-start: calc(var(--section-vertical-spacing-override, 2rem)  + var(--section-vertical-spacing-block-start-compensation, 0px)); /* updating the var(--section-vertical-spacing) style rule to 2rem  */
+  padding-block-end: var(--section-vertical-spacing-override, var(--section-vertical-spacing));
+}
+
+@media screen and (min-width: 700px) {
+  .timeline__item {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    height: 575px; /* adding this style rule */
+  }
+
+  .timeline__item > * {
+    grid-area: unset;
+  }
+
+  .timeline__item-content {
+    align-self: end;
+    height: 100%; /* adding this style rule */
+    overflow: auto; /* adding this style rule */
+  }
+}
+
 
 
 
