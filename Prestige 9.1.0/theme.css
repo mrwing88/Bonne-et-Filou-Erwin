@@ -357,6 +357,13 @@ button, [type="button"], [type="reset"], [type="submit"] {
   }
 }
 
+.section-spacing--tight {
+  --section-vertical-spacing: 2rem; /* updating this style rule from var(--section-vertical-spacing-tight) to 2rem */
+  --section-stack-gap: var(--section-stack-gap-tight);
+}
+
+
+
 
 
 
