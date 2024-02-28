@@ -362,6 +362,12 @@ button, [type="button"], [type="reset"], [type="submit"] {
   --section-stack-gap: var(--section-stack-gap-tight);
 }
 
+.h4, :where(.prose h4) {
+  font-size: var(--text-h4);
+  line-height: 1.6;
+  text-transform: capitalize!important; /* adding this style rule */
+}
+
 
 
 
