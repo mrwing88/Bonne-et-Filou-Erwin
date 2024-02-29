@@ -72,7 +72,7 @@
 
 @media screen and (min-width: 1150px) {
   .footer__block-list {
-    justify-content: center; /* updating this style rule from var(--footer-content-justify-items) to center */
+    justify-content: space-evenly; /* removing this style rule from var(--footer-content-justify-items) to space-evenly */
     column-gap: 3.75rem;
   }
 }
