@@ -396,7 +396,45 @@ button, [type="button"], [type="reset"], [type="submit"] {
   }
 }
 
+.product-card {
+  scroll-snap-align: start;
+  grid-template-columns: minmax(0, 1fr);
+  align-content: start;
+  gap: 1.25rem;
+  display: grid;
+  position: relative;
+  align-content: space-between; /* adding this style rule */
+}
 
+.product-card__figure {
+  position: relative;
+  min-height: 344.71px; /* adding this style rule */
+}
+
+.product-card__info {
+  text-align: center;
+  align-content: start;
+  justify-items: center;
+  gap: .75rem;
+  display: grid;
+  min-height: 120.58px; /* adding this style rule */
+  align-content: space-between; /* adding this style rule */
+}
+
+.color-swatch {
+  --swatch-offset: 2px;
+  --swatch-size: 2.125rem;
+  --swatch-border-size: 1px;
+  --swatch-disabled-strike-color: rgb(var(--border-color));
+  width: var(--swatch-size);
+  height: var(--swatch-size);
+  padding: var(--swatch-offset);
+  border: var(--swatch-border-size) solid black; /* updating this style rule from transparent to black */
+  background: content-box var(--swatch-background) no-repeat center / cover;
+  place-items: center;
+  display: grid;
+  position: relative;
+}
 
 
 
