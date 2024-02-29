@@ -368,6 +368,36 @@ button, [type="button"], [type="reset"], [type="submit"] {
   text-transform: capitalize!important; /* adding this style rule */
 }
 
+@media screen and (min-width: 700px) {
+  .footer__block-list {
+    justify-content: var(--footer-content-justify-items);
+    flex-wrap: wrap;
+    gap: 3rem;
+    display: flex;
+  }
+
+  .footer__block {
+    flex: auto;
+  }
+
+  .footer__block--links, .footer__block--image {
+    flex-grow: 0;
+    max-width: 14rem;
+  }
+
+  .footer__block--newsletter {
+    flex-basis: 14rem;
+    max-width: 18rem;
+  }
+
+  .footer__block--text {
+    flex-basis: 14rem;
+    max-width: fit-content; /* updating this style rule from 24rem to fit-content */
+  }
+}
+
+
+
 
 
 
