@@ -298,11 +298,9 @@ button, [type="button"], [type="reset"], [type="submit"] {
 }
 
 .link, .prose a:not(.h1, .h2, .h3, .h4, .h5, .h6, .button, .link-faded, .link-faded-reverse) {
-/*  text-underline: none; */ /* removing this style rule */
-/*  background: linear-gradient(to right, currentColor, currentColor) 0 min(100%, 1.35em) / 100% 1px no-repeat; */ /* removing this style rule */
+  text-underline: none;
+  background: linear-gradient(to right, currentColor, currentColor) 0 min(100%, 1.35em) / 100% 1px no-repeat;
   transition: background-size .3s ease-in-out;
-  font-family: Garamond, Baskerville, Caslon, serif; /* adding this style rule */
-  letter-spacing: 0.2em; /* adding this style rule */
 }
 
 .h6, :where(.prose h6) {
@@ -435,6 +433,24 @@ button, [type="button"], [type="reset"], [type="submit"] {
   display: grid;
   position: relative;
 }
+
+.blog-post-card__read-more {
+    font-weight: bold; /* adding this style rule */
+}
+
+.prose.heading.is-selected {
+  font-family: Garamond, Baskerville, Caslon, serif!important; /* adding this style rule */
+  letter-spacing: 0.2em; /* adding this style rule */
+}
+
+.announcement-bar__carousel {
+  flex-grow: 1;
+  place-items: center;
+/*  max-width: 35rem; */ /* removing this style rule */
+  display: grid;
+}
+
+
 
 
 
