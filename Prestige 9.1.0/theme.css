@@ -406,7 +406,7 @@ button, [type="button"], [type="reset"], [type="submit"] {
 
 .product-card__figure {
   position: relative;
-  min-height: 344.71px; /* adding this style rule */
+  min-height: 344.71px; /* adding this style rule *//
 }
 
 .product-card__info {
