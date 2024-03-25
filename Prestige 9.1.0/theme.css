@@ -446,7 +446,7 @@ button, [type="button"], [type="reset"], [type="submit"] {
 .announcement-bar__carousel {
   flex-grow: 1;
   place-items: center;
-/*  max-width: 35rem; */ /* removing this style rule */
+/*  max-width: 35rem; */ /* removing this style rule **/
   display: grid;
 }
 
