@@ -1,1 +1,141 @@
+{% include 'product-content.zipifypages', contentprt: 'header' %}<style>
+   #section-related-products div.rc_popup{display:none !important;}
+  @media all and (min-width:1200px){
+ }
+</style>
+
+{% section 'product-template-macaron' %}
+
+{% capture the_snippet_reviews %}{% render 'socialshopwave-widget-recommends' with 1 %}{% endcapture %}
+{% unless the_snippet_reviews contains 'Liquid error' %}
+{{ the_snippet_reviews }}
+{% endunless %}    
+{% if product.handle contains 'cbd-pet-drops' %}
+{% section 'gallery_image' %}
+{% section 'gallery_image_2' %}
+{% section 'custom-html' %}
+{% section 'rich-text-with-blocks-first' %}
+{% section 'rich-text-with-blocks' %}
+{% section 'image-with-text-overlay' %}
+{% section 'page-coa-template' %}
+
+{% endif %}
+
+{% if product.handle contains 'dog-macaron' %}
+{% section 'gallery_image' %}
+<div class="finest_macarons">
+	<div class="Container MainContent Pattern">
+  <header class="PageHeader">
+    <div class="SectionHeader SectionHeader--center">
+      <h1 class="SectionHeader__Heading Heading u-h1">Finest Ingredients</h1>
+    </div>
+  </header>
+       <p><br></p>
+  
+  <div class="PageContent PageContent--narrow Rte">
+    <meta charset="utf-8">
+    <p>The most lavish and decadent&nbsp;French-inspired dog treat wouldn’t live up to its name if it weren’t<span>&nbsp;</span><strong>handmade</strong><span>&nbsp;</span>from the<span>&nbsp;</span><strong>highest quality</strong>,<span>&nbsp;</span><strong>premium ingredients</strong><span>&nbsp;</span>we could find.</p>
+    <p>Our<span>&nbsp;</span><strong>100% natural macaron&nbsp;recipe</strong><span>&nbsp;</span>is<span>&nbsp;</span><strong>handmade in small batches</strong><span>&nbsp;</span>and is<span>&nbsp;</span><strong>free of&nbsp;artificial coloring or any preservatives</strong>. Our ingredients are all<span>&nbsp;</span><strong>healthy for dogs</strong>,<span>&nbsp;</span><strong>corn-free</strong>,<span>&nbsp;and&nbsp;</span><strong>wheat-free</strong>, and<span>&nbsp;</span><strong>sourced from local suppliers</strong><span>&nbsp;</span>- only the best for our four-legged royals.</p>
+    <p>Available in a multitude of delectable flavors, your pampered pup can enjoy a treat that not only looks good, but<span>&nbsp;</span><strong>tastes good too</strong>.</p>
+    <p></p><p></p>
+    
+  </div>
+</div>
+</div>
+{% section 'testimonial-slider' %}
+
+{% section 'IndustryAwards' %}
+{% section 'friends-lovers' %}   
+{% comment %}
+<div class="review_macarons">
+  <div class="Container">
+    <div id="ReviewsWidget"></div>
+  </div>
+</div>
+{% endcomment %}
+
+<script src="https://widget.reviews.io/combined/dist.js?v1"></script>
+<link rel="stylesheet" href="https://widget.reviews.io/combined/style.css?v1">
+<style>.CombinedWidget.reviews-combined-widget .Button--solid{color:#fff !important}
+  .CombinedWidget.reviews-combined-widget a{width:50%;text-align:right}
+  .Header__slottedContent{width:50%}
+</style>
+<script>
+  var isIE11 = !!window.MSInputMethodContext && !!document.documentMode;
+  if(!isIE11){
+    new ReviewsWidget('#ReviewsWidget', {
+      store: 'bonneetfilou.com',
+      widget: 'combined-widget',
+      options: {
+        types: 'product_review', // store_review,product_review,questions (choose what content you prefer to show in this widget)
+        per_page: 5, // Any number (set how many reviews/questions you want to show per page)
+
+        /* Product Reviews Settings */
+        product_review: {
+          sku: '{{ product.handle }};{{ product.variants | map: 'sku' | join: ';' }};{{ product.variants | map: 'id' | join: ';' }}',  //Multiple SKU's seperated by semicolon
+          enable_write_review:true,
+          enable_smart_filters:true,
+          enable_rating_filters:true,
+          enable_toggle_filters:true,
+          enable_social_sharing:false,
+          enable_helpful:false,
+          enable_featured_review_photos:true,
+          enable_featured_social_photos:true,
+          show_mention_text:true,
+          show_dates:true,
+          show_replies:true,
+          show_avatars:true,
+          show_photos:true,
+          show_verify_status:true
+
+        },
+
+      }
+
+    });
+  } 
+</script>
+{% endif %}
+{% section 'related-products' %}
+{% section 'recently-viewed-products' %}
+
+<!--- Klaviyo Product Listener - Hash -->
+  <script text="text/javascript">
+  var _learnq = _learnq || [];
+
+  var item = {
+    Name: {{ product.title|json }},
+    ProductID: {{ product.id|json }},
+    Categories: {{ product.collections|map:'title'|json }},
+    ImageURL: "https:{{ product.featured_image.src|img_url:'grande' }}",
+    URL: "{{ shop.secure_url }}{{ product.url }}",
+    Brand: {{ product.vendor|json }},
+    Price: {{ product.price|money|json }},
+    CompareAtPrice: {{ product.compare_at_price_max|money|json }}
+  };
+
+  _learnq.push(['track', 'Viewed Product', item]);
+  _learnq.push(['trackViewedItem', {
+    Title: item.Name,
+    ItemId: item.ProductID,
+    Categories: item.Categories,
+    ImageUrl: item.ImageURL,
+    Url: item.URL,
+    Metadata: {
+      Brand: item.Brand,
+      Price: item.Price,
+      CompareAtPrice: item.CompareAtPrice
+    }
+  }]);
+</script>
+<!---- Product Listener End --->
+<!--- Klaviyo Add to Cart Event - Hash -->
+  <script type="text/javascript">
+     var _learnq = _learnq || [];
+     document.querySelector('.ProductForm__AddToCart').addEventListener('click',function (){
+           _learnq.push(['track', 'Added to Cart', item]);
+     });
+</script>
+<!--- Klaviyo Add to Cart Event End - Hash -->{% include 'product-content.zipifypages', contentprt: 'footer' %}
+
 
