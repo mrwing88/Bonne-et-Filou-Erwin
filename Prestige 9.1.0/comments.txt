@@ -7,6 +7,15 @@ product-quick-buy.liquid | Updating mobile_controls from arrows to free_scroll @
 
 header.liquid | inserting <li class="menuimg"></li> @ line 159
 
-created a product.macarons-erwin.liquid in Templates | 
+created in Templates
+product.macarons.liquid
 
+created in Snippets
+product-content.zipifypages.liquid
+image-size.liquid
+
+created in Sections
+product-template-macaron.liquid
+
+created a  in Snippets
 
