@@ -406,7 +406,7 @@ button, [type="button"], [type="reset"], [type="submit"] {
 
 .product-card__figure {
   position: relative;
-  min-height: 344.71px; /* adding this style rule *//
+  min-height: 344.71px; /* adding this style rule */
 }
 
 .product-card__info {
@@ -446,11 +446,16 @@ button, [type="button"], [type="reset"], [type="submit"] {
 .announcement-bar__carousel {
   flex-grow: 1;
   place-items: center;
-/*  max-width: 35rem; */ /* removing this style rule **/
+/*  max-width: 35rem; */ /* removing this style rule */
   display: grid;
 }
 
-
+@media screen and (min-width: 1000px) {
+  .product-info {
+    position: static; /* updating this style rule from sticky to static */
+    inset-block-start: calc(var(--sticky-area-height)  + 20px);
+  }
+}
 
 
 
