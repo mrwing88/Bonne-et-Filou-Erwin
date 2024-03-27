@@ -13,9 +13,8 @@ product.macarons.liquid
 created in Snippets
 product-content.zipifypages.liquid
 image-size.liquid
+product-meta-new.liquid
+product-form-extra.liquid
 
 created in Sections
 product-template-macaron.liquid
-
-created a  in Snippets
-
