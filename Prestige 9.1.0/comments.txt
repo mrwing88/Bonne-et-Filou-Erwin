@@ -8,13 +8,14 @@ product-quick-buy.liquid | Updating mobile_controls from arrows to free_scroll @
 header.liquid | inserting <li class="menuimg"></li> @ line 159
 
 created in Templates
-product.macarons.liquid
+product.macarons.liquid (deleted on Shopify)
 
 created in Snippets
-product-content.zipifypages.liquid
-image-size.liquid
-product-meta-new.liquid
-product-form-extra.liquid
+product-content.zipifypages.liquid (deleted on Shopify)
+image-size.liquid (deleted on Shopify)
+product-meta-new.liquid (deleted on Shopify)
+product-form-extra.liquid (deleted on Shopify)
+
 
 created in Sections
-product-template-macaron.liquid
+product-template-macaron.liquid (deleted on Shopify)
