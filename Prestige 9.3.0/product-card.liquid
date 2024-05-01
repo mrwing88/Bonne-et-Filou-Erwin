@@ -1,0 +1,15 @@
+{%- comment -%}
+-------------------------------------------
+Add To Cart Button
+-------------------------------------------
+
+product-card.liquid | adding this code @ line 180 | Inside the <div> and before the closing </div>
+
+-------------------------------------------
+
+{%- endcomment -%}
+
+<form method="post" action="/cart/add" class="collection-cart-btn">
+  <input type="hidden" name="id" value="{{ product.variants.first.id }}" />
+  <input type="submit" value="Add to cart" class="button" style="margin-top: 17px; width: 100%; border-radius: 14px;" />
+</form>
