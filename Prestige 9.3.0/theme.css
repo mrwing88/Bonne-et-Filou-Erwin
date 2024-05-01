@@ -1,0 +1,9 @@
+@media screen and (min-width: 700px) {
+  .timeline__nav {
+    margin-block-start: var(--section-stack-gap); /* erwin-updating this style rule from margin-block-start to margin-block-end */
+  }
+
+  .timeline__nav > button:after {
+    inset-block-end: -.5rem;
+  }
+}
