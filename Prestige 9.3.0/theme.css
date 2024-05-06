@@ -7,3 +7,19 @@
     inset-block-end: -.5rem;
   }
 }
+
+@media screen and (min-width: 700px) {
+  .timeline__item {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    height: 575px; /* adding this style rule */
+  }
+
+  .timeline__item > * {
+    grid-area: unset;
+  }
+
+  .timeline__item-content {
+    align-self: end;
+  }
+}
+
