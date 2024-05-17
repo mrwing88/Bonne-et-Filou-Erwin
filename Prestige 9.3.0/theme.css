@@ -23,3 +23,9 @@
   }
 }
 
+video-media > :is(video:not(:fullscreen), img) {
+  object-fit: contain; /* erwin-updating this style rule from cover to contain @ 1675 */
+  object-position: center;
+  margin: 0 !important;
+}
+
